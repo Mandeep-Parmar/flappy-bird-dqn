@@ -168,17 +168,17 @@ A separate target network provides the next-state value estimates used in the tr
 
 A standard DQN target can be expressed as:
 
-\[
-y = r + \gamma (1-d)\max_{a'} Q_{\text{target}}(s', a')
-\]
+$$
+y = r + \gamma (1 - d) \max_{a'} Q_{\text{target}}(s', a')
+$$
 
 Where:
 
-- \(r\) is the immediate reward.
-- \(\gamma\) is the discount factor.
-- \(d\) indicates whether the transition is terminal.
-- \(s'\) is the next state.
-- \(a'\) represents a possible next action.
+- $r$ is the immediate reward.
+- $\gamma$ is the discount factor.
+- $d$ indicates whether the transition is terminal.
+- $s'$ is the next state.
+- $a'$ represents a possible next action.
 
 The network is trained to bring its predicted Q-value for the chosen action closer to the target. The exact loss function and terminal-state handling are determined by the implementation in `agent.py`.
 
