@@ -108,6 +108,14 @@ The following are observed results from recorded runs, not averaged benchmark re
 
 Performance can vary between episodes. The evaluation reward of approximately 100.1 should be interpreted alongside the configured reward threshold and the evaluation termination logic; it does not by itself establish consistent performance across multiple episodes.
 
+### Evaluation Demo
+
+The trained agent passes 20 pipes:
+
+<p align="center">
+  <img src="assets/flappybird.gif" alt="Flappy Bird AI Evaluation Demo" width="300"/>
+</p>
+
 ## ⚙️ Hyperparameters
 
 The training configuration is managed through `parameters.yaml`.
