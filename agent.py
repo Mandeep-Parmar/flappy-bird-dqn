@@ -108,8 +108,8 @@ class Agent:
             episode_reward = 0
             terminated = False
 
-            # Stop the episode when the environment ends or the configured reward threshold is reached.
-            while (not terminated and episode_reward < self.reward_threshold):
+            # Stop the episode when the environment ends, or during training if reward threshold is reached.
+            while not terminated and (not is_training or episode_reward < self.reward_threshold):
                 # Epsilon-greedy action selection:
                 if is_training and random.random() < epsilon:
                     action = env.action_space.sample()  # explore
