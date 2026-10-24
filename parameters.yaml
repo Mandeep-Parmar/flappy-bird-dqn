@@ -1,0 +1,14 @@
+# Hyperparameter configuration for the Flappy Bird DQN agent.
+# The key `flappybirdv0` is the parameter-set name passed to agent.py on the command line.
+
+flappybirdv0:
+  env_id: FlappyBird-v0       # Gymnasium environment identifier (currently hard-coded in agent.py).
+  epsilon_init: 1             # Start with 100% random exploration.
+  epsilon_min: 0.05           # Keep at least 5% exploration during training.
+  epsilon_decay: 0.9995       # Multiply epsilon by this value after each episode.
+  replay_memory_size: 100000  # Maximum number of transitions retained in replay memory.
+  mini_batch_size: 32         # Number of transitions sampled for each optimization step.
+  network_sync_rate: 1000     # Environment steps between target-network weight copies.
+  alpha: 0.0003               # Adam optimizer learning rate.
+  gamma: 0.99                 # Discount factor for future rewards.
+  reward_threshold: 100       # Ends an episode when accumulated reward reaches this threshold.
