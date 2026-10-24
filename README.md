@@ -103,14 +103,14 @@ The following are observed results from recorded runs, not averaged benchmark re
 |---|---:|
 | Training episodes reached | 23,350+ |
 | Best recorded training reward | 90.5 |
-| Recorded evaluation reward | 243.10 |
-| Pipes passed in a recorded evaluation | 51 |
+| Recorded evaluation reward | 176.40 (Peak: 243.10) |
+| Pipes passed in demo run | 37 (Peak: 51) |
 
-Performance can vary between episodes. The evaluation reward of 243.10 demonstrates the agent's ability to maintain stable flight dynamics and navigate through 50+ consecutive obstacles without crashing.
+Performance can vary between episodes. In the evaluation demo below, the agent achieves a score of **176.40** and clears **37 consecutive pipes** with stable flight dynamics.
 
 ### Evaluation Demo
 
-The trained agent dodging pipes in evaluation mode:
+The trained agent navigating through 37 pipes in evaluation mode (`Reward = 176.40`):
 
 <p align="center">
   <img src="assets/flappybird.gif" alt="Flappy Bird AI Evaluation Demo" width="300"/>
